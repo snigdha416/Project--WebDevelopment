@@ -1,0 +1,112 @@
+<html>
+    <head>
+        <title>Registration page</title>
+        <script>
+            function myvalidate(form)
+            {
+                var userName=form.username.value;
+                var lastName = form.lastname.value;
+                var Password=form.password.value;
+                var Contact=form.contact.value;
+                var Mail=form.xyz.value;
+                var check=form.pass.value;
+        if(userName.length === 0) {
+            alert("You Must Enter valid username ");
+            return false;
+        }
+        if(lastName.length === 0) {
+            alert("You Must Enter valid lastname ");
+            return false;
+        }   
+        if(Contact.length === 0) {
+            alert("Please enter mobile number ");
+            return false;      
+        }
+        if(Mail.length === 0) {
+            alert("Please enter valid Mail ID ");
+            return false;
+        }
+        if(Password.length === 0) {
+            alert("You Must Create a valid Password ");
+            return false;
+        }
+        if(Password!=check){
+            alert("Password doesn't match !");
+            return false;
+        }
+      return true; 
+       }
+            
+            </script>
+    </head>
+    <style>
+       
+        body{
+            text-align: center;
+            background: url("img2.jpg");
+            background-size: cover;
+        
+            background-repeat: no-repeat;
+            
+            
+        }
+        button{
+            border-color: white;
+            color: black;
+            cursor: pointer;
+            border-radius: 2px;
+            opacity: 10;
+        }
+        button:active{
+            color:white;
+            background-color: aqua;
+        }
+        button:hover{
+            color:blue;
+            background-color: white;
+        }
+        .xyz{
+            font-size: x-large;
+            color:white;
+            padding-left: 30%;
+            margin-right: 30%;
+            padding-top: 1%;
+            text-align: center;
+            
+        }
+        .foot{
+            width: 10%;
+            height:10%;
+            text-align: center;
+            background-color: black;
+
+
+        }
+        .checkbox{
+            color: black;
+
+        }
+
+        
+    </style>
+    <body>
+        
+            <div class="xyz">
+            <h1>Welcome to BookShelf</h1></div><br><br><br>
+            <form action="loginpage.html" style="font-size: x-large; font-family:'Times New Roman', Times, serif; color:white"  onsubmit="return myvalidate(this);">
+            <label>Username :<input type="text" name="username" placeholder="Username" style="font-size: medium; background-color:rgb(194, 239, 253);border:none" autofocus><br><br>
+            <label>Lastname : <input type="text" name="lastname" placeholder="Last name" style="font-size: medium; background-color:rgb(194, 239, 253) ;"><br><br>
+            <label>Phone no. : <input type="tel" name="contact" pattern="[0-9]{10}" placeholder="Phone number" title="enter 10 digits" style="font-size: medium; background-color: rgb(194, 239, 253);"><br><br>
+            <label>Email Id : <input type="email" name="xyz" style="font-size: medium; background-color: rgb(194, 239, 253);" placeholder="Email Id"><br><br>
+            <label> Password :<input type="password" name="password" placeholder="Enter your password" style="font-size:medium; background-color: rgb(194, 239, 253);">
+            </div><br><br></label>
+            Re-enter :<input type="password" name="pass" placeholder="Re-enter your password" style="font-size:medium; background-color: rgb(194, 239, 253);">
+            <br><br><input type="checkbox" style="color: black;">Remember me </input><br><br>
+          
+          <button><a href="bookspage.html"></a>Register</button><br><br>
+        
+    </form>
+        
+    
+</body>
+</html>
